@@ -1,0 +1,7 @@
+{
+  "name": "cholesterol-game",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

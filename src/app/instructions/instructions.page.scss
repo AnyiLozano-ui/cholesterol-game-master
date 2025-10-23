@@ -1,0 +1,414 @@
+.background {
+    height: 100%;
+    background: url("/assets/images/fondoInstrucciones.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0px;
+    font-family: "AntonRegular", sans-serif;
+    letter-spacing: 2px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+    z-index: 1;
+}
+
+#container {
+    text-align: center;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.instructiones-container {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+}
+
+.instructiones {
+    max-width: 100%;
+    height: auto;
+}
+
+.buttonJugar-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bton-jugar {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+}
+
+.container-btnHome {
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    width: auto;
+    height: auto;
+    z-index: 10;
+}
+
+.btnHome {
+    width: 60%;
+    height: auto;
+    cursor: pointer;
+}
+
+.atras-left-image {
+    position: absolute;
+    left: 4vw;
+    top: 45%;
+    width: 5%;
+    height: auto;
+    z-index: 2;
+}
+
+.adelante-left-image {
+    position: absolute;
+    right: 4vw;
+    top: 45%;
+    width: 5%;
+    height: auto;
+    z-index: 2;
+}
+
+/* Estilos para el logo */
+.logo-container {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilos para el mensaje al girar la pantalla */
+.girar-pantalla {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 1.5em;
+    font-family: "Nexa-bold";
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 100;
+}
+
+/* Mostrar mensaje solo en dispositivos móviles en modo vertical */
+@media screen and (orientation: portrait) and (max-width: 1024px) {
+    .girar-pantalla {
+        display: flex;
+    }
+
+    .background {
+        pointer-events: none;
+        filter: blur(50px);
+    }
+}
+
+/* Media queries para pantallas grandes */
+@media (min-width: 1200px) {
+    .container-btnHome {
+        position: absolute;
+        top: 50px;
+        left: 30px;
+        width: auto;
+        height: auto;
+        z-index: 10;
+    }
+
+    .btnHome {
+        width: 60%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    .instructiones-container {
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 2;
+    }
+
+    .instructiones {
+        max-width: 80%;
+        height: auto;
+    }
+
+    .buttonJugar-container {
+        margin-top: -50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .bton-jugar {
+        width: 100%;
+        height: auto;
+        max-width: 350px;
+    }
+
+    .atras-left-image {
+        position: absolute;
+        left: 4vw;
+        top: 45%;
+        width: 5%;
+        height: auto;
+        z-index: 2;
+    }
+
+    .adelante-left-image {
+        position: absolute;
+        right: 4vw;
+        top: 45%;
+        width: 5%;
+        height: auto;
+        z-index: 2;
+    }
+}
+
+/* Media queries para pantallas medianas */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .container-btnHome {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        width: auto;
+        height: auto;
+        z-index: 10;
+    }
+
+    .btnHome {
+        width: 60%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    .instructiones-container {
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 2;
+    }
+
+    .instructiones {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .buttonJugar-container {
+        margin-top: -80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .bton-jugar {
+        width: 100%;
+        height: auto;
+        max-width: 500px;
+    }
+
+    .atras-left-image {
+        position: absolute;
+        left: 4vw;
+        top: 45%;
+        width: 5%;
+        height: auto;
+        z-index: 2;
+    }
+
+    .adelante-left-image {
+        position: absolute;
+        right: 4vw;
+        top: 45%;
+        width: 5%;
+        height: auto;
+        z-index: 2;
+    }
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 767px) {
+    .container-btnHome {
+        position: absolute;
+        top: 30px;
+        left: 20px;
+        width: auto;
+        height: auto;
+        z-index: 10;
+    }
+
+    .btnHome {
+        width: 40%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    .logo {
+        width: 50px;
+    }
+
+    .instructiones {
+        width: 80%;
+    }
+
+    .atras-left-image {
+        position: absolute;
+        left: 4vw;
+        top: 45%;
+        width: 5%;
+        height: auto;
+        z-index: 2;
+    }
+
+    .adelante-left-image {
+        position: absolute;
+        right: 4vw;
+        top: 45%;
+        width: 5%;
+        height: auto;
+        z-index: 2;
+    }
+}
+
+/* Media queries para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .container-btnHome {
+        position: absolute;
+        top: 50px;
+        left: 20px;
+        width: auto;
+        height: auto;
+        z-index: 10;
+    }
+
+    .btnHome {
+        width: 40%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    .logo {
+        width: 50px;
+    }
+
+    .instructiones {
+        width: 80%;
+    }
+
+    .atras-left-image {
+        position: absolute;
+        left: 4vw;
+        top: 45%;
+        width: 5%;
+        height: auto;
+        z-index: 2;
+    }
+
+    .adelante-left-image {
+        position: absolute;
+        right: 4vw;
+        top: 45%;
+        width: 5%;
+        height: auto;
+        z-index: 2;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container-btnHome {
+        position: absolute;
+        top: 30px;
+        left: 20px;
+        width: auto;
+        height: auto;
+        z-index: 10;
+    }
+
+    .btnHome {
+        width: 30%;
+    }
+
+    .instructiones-container {
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 2;
+    }
+
+    .instructiones {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .buttonJugar-container {
+        margin-top: -45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .bton-jugar {
+        width: 100%;
+        height: auto;
+        max-width: 250px;
+    }
+
+    .logo-container {
+        position: absolute;
+        bottom: 20px;
+        left: 30px;
+    }
+    
+    .logo {
+        width: 50%;
+        height: auto;
+    }
+}

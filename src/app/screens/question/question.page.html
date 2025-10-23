@@ -1,0 +1,31 @@
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <div class="time-container-time">
+      <div [innerHTML]="getTime()" class="time-container"></div>
+    </div>
+    <div class="question-container">
+      <h3 class="label">{{ question!.label }}</h3>
+      <div class="option-container">
+        @for (item of question!.options; track item.label; let ind = $index) {
+        <div class="option" (click)="handleSelectOption(ind)">
+          <img src="/assets/images/option-border.png">
+          <p class="label-option" [id]="`option-${ind}`">
+            <b class="letter-option">
+              @if (ind === 0) {
+              A.
+              } @else if (ind === 1) {
+              B.
+              } @else if (ind === 2) {
+              C.
+              } @else if (ind === 3) {
+              D.
+              }
+            </b>
+            <span>{{ item.label }}</span>
+          </p>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,32 @@
+<ion-content fullscreen="true">
+  <div class="game-over-container">
+    <div class="header">
+      <img
+        src="/assets/images/house.png"
+        class="home-button"
+        (click)="handleGoToHome()"
+      />
+    </div>
+    @if (winTheGame) {
+    <div class="content">
+      <div class="score">
+        <img src="/assets/images/logo.png" alt="" class="logo" />
+        <div class="table">
+          <img src="/assets/images/puntage1.png" />
+          <div class="quantity-container">
+            <span class="quantity">{{ quantity }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="car">
+        <img src="/assets/images/car.png" class="game-over-image" />
+      </div>
+    </div>
+    } @else {
+      <div class="game-over">
+        <div class="click-button" (click)="handleGoToHome()"></div>
+        <img class="" src="/assets/images/game-over.png" />
+      </div>
+    }
+  </div>
+</ion-content>

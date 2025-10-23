@@ -1,0 +1,15 @@
+<ion-content [fullscreen]="true">
+    <div class="container">
+        <div class="header">
+            <div class="left-header"></div>
+            <div class="right-header" [innerHTML]="getTime()"></div>
+        </div>
+        <div class="content">
+            <img src="/assets/images/fallaste1.png"/>
+            <div class="button" (click)="handleClick()"></div>
+        </div>
+        <div class="footer">
+            <img src="/assets/images/logo-game.png"/>
+        </div>
+    </div>
+</ion-content>

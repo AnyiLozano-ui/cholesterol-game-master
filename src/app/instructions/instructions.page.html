@@ -1,0 +1,21 @@
+<ion-content [fullscreen]="true">
+  <div id="container" class="background">
+    <div class="logo-container">
+      <img src="/assets/images/logo.png" alt="Logo" class="logo">
+    </div>
+    <div class="container-btnHome">
+      <a href="index.html">
+        <img class="btnHome" loading="lazy" src="/assets/images/house.png" alt="Iniciar Juego" (click)="goToHouse()">
+      </a>
+    </div>
+    <div class="instructiones-container">
+      <img src="/assets/images/instrucciones.png" alt="Instrucciones" class="instructiones">
+      <div class="buttonJugar-container">
+        <img src="/assets/images/btnJugar.png" alt="Botón Jugar" class="bton-jugar" (click)="goToGame()">
+      </div>
+    </div>
+  </div>
+</ion-content>
+<div class="girar-pantalla">
+  <span>🔄 Para una mejor vista, gire la pantalla 🔄</span>
+</div>
