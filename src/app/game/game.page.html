@@ -1,0 +1,23 @@
+<ion-content [fullscreen]="true">
+  <div class="game-container">
+    <div class="header-controls-container">
+      <div [innerHTML]="getScore()"></div>
+      <div [innerHTML]="getTime()" class="time-container"></div>
+    </div>
+    <div id="game-container" #gameContainer [style.height]="getGameContainerHeight()"></div>
+    <div class="footer-container">
+      <div class="left-container">
+        <img src="assets/images/logo-game.png" alt="" class="logo-game">
+        <img src="assets/images/up-bottom.png" alt="" class="up-button">
+        <img src="assets/images/down-button.png" alt="" class="down-button">
+      </div>
+      <div class="right-container">
+        <img src="assets/images/gun-data.png" alt="" class="gun">
+        <img src="assets/images/run-game.png" alt="" class="run">
+      </div>
+    </div>
+  </div>
+</ion-content>
+<div class="girar-pantalla">
+  <span>🔄 Para una mejor vista, gire la pantalla 🔄</span>
+</div>

@@ -1,0 +1,362 @@
+.background {
+  height: 100%;
+  background: url("/assets/images/fondo.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0px;
+  font-family: "AntonRegular", sans-serif;
+  letter-spacing: 2px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+}
+
+#container {
+  text-align: center;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.botones {
+  position: absolute;
+  bottom: 5%;
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  right: 5%;
+}
+
+// .container-btnHome {
+//   position: absolute;
+//   bottom: 1.5%;
+//   right: 10%;
+//   width: 80px;
+//   height: 80px;
+//   z-index: 10;
+// }
+
+.btnHome {
+  width: 60%;
+  height: auto;
+  cursor: pointer;
+}
+
+// .container-btnAdelante {
+//   position: absolute;
+//   bottom: 5%;
+//   right: 5%;
+//   width: auto;
+//   height: auto;
+//   z-index: 10;
+// }
+
+.btnAdelante {
+  width: 70%;
+  height: auto;
+  cursor: pointer;
+}
+
+.instructions-container {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.instructions {
+  max-width: 100%;
+  height: auto;
+}
+
+.button-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-jugar {
+  width: 100%;
+  height: auto;
+  max-width: 200px;
+}
+
+/* Estilos para el logo */
+.logo-container {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+}
+
+.logo {
+  width: 70%;
+  height: auto;
+}
+
+/* Estilos para el mensaje al girar la pantalla */
+.girar-pantalla {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 1.5em;
+  font-family: "Nexa-bold";
+  font-weight: bold;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 100;
+}
+
+/* Mostrar mensaje solo en dispositivos móviles en modo vertical */
+@media screen and (orientation: portrait) and (max-width: 1366px) {
+  .girar-pantalla {
+    display: flex;
+  }
+
+  .background {
+    pointer-events: none;
+    filter: blur(50px);
+  }
+}
+
+/* Media queries para pantallas grandes */
+@media (min-width: 1200px) {
+  // .container-btnHome {
+  //   position: absolute;
+  //   top: 50px;
+  //   left: 20px;
+  //   width: auto;
+  //   height: auto;
+  //   z-index: 10;
+  // }
+
+  .btnHome {
+    width: 60%;
+    height: auto;
+    cursor: pointer;
+  }
+
+  // .container-btnAdelante {
+  //   position: absolute;
+  //   top: 50px;
+  //   left: 80px;
+  //   width: auto;
+  //   height: auto;
+  //   z-index: 10;
+  // }
+
+  .btnAdelante {
+    width: 70%;
+    height: auto;
+    cursor: pointer;
+  }
+
+  .instructions-container {
+    position: absolute;
+    right: 50px;
+    top: 65%;
+    transform: translateY(-50%);
+    width: 37%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .instructions {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    left: 0px;
+    cursor: pointer;
+  }
+
+  .btn-jugar {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+  }
+}
+
+/* Media queries para pantallas medianas */
+@media (min-width: 768px) and (max-width: 1199px) {
+  // .container-btnHome {
+  //   position: absolute;
+  //   top: 50px;
+  //   left: 20px;
+  //   width: auto;
+  //   height: auto;
+  //   z-index: 10;
+  // }
+
+  .btnHome {
+    width: 60%;
+    height: auto;
+    cursor: pointer;
+  }
+
+  // .container-btnAdelante {
+  //   position: absolute;
+  //   top: 50px;
+  //   left: 80px;
+  //   width: auto;
+  //   height: auto;
+  //   z-index: 10;
+  // }
+
+  .btnAdelante {
+    width: 70%;
+    height: auto;
+    cursor: pointer;
+  }
+
+  .instructions-container {
+    position: absolute;
+    right: 50px;
+    top: 65%;
+    transform: translateY(-50%);
+    width: 37%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .instructions {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    left: 0px;
+    cursor: pointer;
+  }
+
+  .btn-jugar {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+  }
+
+  .logo {
+    width: 100px;
+  }
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 767px) {
+  .logo {
+    width: 50px;
+  }
+
+  .instructions {
+    width: 80%;
+  }
+}
+
+/* Media queries para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .logo {
+    width: 50px;
+  }
+
+  .instructions {
+    width: 80%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  // .container-btnHome {
+  //   position: absolute;
+  //   top: 50px;
+  //   left: 20px;
+  //   width: auto;
+  //   height: auto;
+  //   z-index: 10;
+  // }
+
+  .btnHome {
+    width: 60%;
+    height: auto;
+    cursor: pointer;
+  }
+
+  // .container-btnAdelante {
+  //   position: absolute;
+  //   top: 50px;
+  //   left: 80px;
+  //   width: auto;
+  //   height: auto;
+  //   z-index: 10;
+  // }
+
+  .btnAdelante {
+    width: 70%;
+    height: auto;
+    cursor: pointer;
+  }
+
+  .instructions-container {
+    position: absolute;
+    right: 50px;
+    top: 65%;
+    transform: translateY(-50%);
+    width: 37%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .instructions {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    left: 0px;
+    cursor: pointer;
+  }
+
+  .btn-jugar {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+  }
+
+  .logo {
+    width: 70px;
+  }
+}

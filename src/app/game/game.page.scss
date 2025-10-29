@@ -1,0 +1,145 @@
+ion-content {
+  --background: #1a1a2e;
+  
+  .game-container {
+    background: url('../../assets/images/fondoJuego.png');
+    background-position: center;
+    background-size: cover;
+    min-height: 100dvh;
+    width: 100vw;
+
+    .header-controls-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .time-container {
+        display: flex;
+        justify-content: flex-end;
+
+        .time-clock {
+          min-width: 210px !important;
+          width: 100%;
+        }
+      }
+    }
+
+    #game-container {
+      width: 100%;
+      max-height: 447px;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 4.5vw;
+      padding-right: 4.5vw;
+
+      .left-container {
+        display: flex;
+        gap: 2vw;
+        align-items: center;
+
+        .logo-game {
+          max-width: 10vw;
+        }
+
+        .up-button, .down-button {
+          max-width: 5vw;
+        }
+      }
+
+      .right-container {
+        display: flex;
+        gap: 2vw;
+        align-items: center;
+
+        .gun {
+          max-width: 9vw;
+          margin-top: -1vw;
+        }
+
+        .run {
+          max-width: 7vw;
+        }
+      }
+    }
+  }
+
+
+  
+}
+
+.instructions-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.instructions-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  max-width: 400px;
+  margin: 0 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.instructions-card h2 {
+  color: #d32f2f;
+  margin-bottom: 1rem;
+}
+
+.instructions-card p {
+  color: #333;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.girar-pantalla {
+  display: none;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  color: white;
+  font-size: 1.5em;
+  font-family: "Nexa-bold";
+  font-weight: bold;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+
+  span {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+
+  }
+}
+
+@media screen and (orientation: portrait) and (max-width: 1366px) {
+  .girar-pantalla {
+    display: flex;
+    pointer-events: none;
+    
+  }
+
+  .background {
+    pointer-events: none;
+    filter: blur(50px);
+  }
+}
