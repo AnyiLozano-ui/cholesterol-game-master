@@ -910,7 +910,7 @@ export class GameScene extends Phaser.Scene {
             this.setTimeLeft?.(this.timeLeft);
             this.timeTicker?.remove(false);
             const score = Number(localStorage.getItem('score') || '0');
-            if (score && score >= 100) window.location.href = "/success"
+            if (score && score >= 75) window.location.href = "/success"
             else window.location.href = "/game-over"
         } else {
             this.timeLeft -= 1;
